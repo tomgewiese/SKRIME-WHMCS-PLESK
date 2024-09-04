@@ -1,40 +1,58 @@
-# SKRIME Plesk Lizenz Modul für WHMCS
+# SKRIME Plesk License WHMCS Module
 
-## Installationsanleitung
+## Overview
 
-1. **Modul hochladen:**
+This module enables the integration of SKRIME's Plesk licensing service into WHMCS. With this module, you can manage and provision Plesk licenses directly from your WHMCS dashboard.
 
-   Entpacke die ZIP-Datei und lade den Inhalt in das Hauptverzeichnis deiner WHMCS-Installation hoch.
+## System Requirements
 
+- WHMCS version 7.0 or higher
+- PHP version 7.2 or higher
 
-2. **Server hinzufügen:**
+## Installation
 
-    1. Gehe zu deinem WHMCS-Adminbereich: `deinedomain.de/admin/configservers.php`
-    2. Klicke auf „Server hinzufügen“.
-    3. Wähle unter „Modul“ das Modul **SKRIME Plesk License** aus.
-    4. Gib als Hostname `skrime.eu` ein.
-    5. Trage deinen API-Token in die Felder „Benutzername“, „Passwort“ und „Access Hash“ ein.
+1. **Download and Unzip:** 
+   Download the module ZIP file and unzip its contents into the root directory of your WHMCS installation.
 
+2. **Add Server:**
+   - Go to your WHMCS admin area: `yourdomain.com/admin/configservers.php`
+   - Click on "Add New Server"
+   - Select "SKRIME Plesk License" as the module
+   - Enter `skrime.eu` as the hostname
+   - Enter your API token in the "Username", "Password", and "Access Hash" fields
 
-3. **Verbindung testen:**
+3. **Test Connection:**
+   - Click on "Test Connection" and wait for confirmation of a successful connection
+   - Optionally, give the server a custom name for better identification
 
-    - Klicke auf „Test Connection“ und warte auf die Bestätigung, dass die Verbindung erfolgreich hergestellt wurde.
-    - Verleihe dem Server einen eigenen Namen zur besseren Zuordnung (optional).
+4. **Set Maximum Accounts (Optional):**
+   - Set the maximum number of licenses that can be obtained through SKRIME
 
+5. **Save Settings:**
+   - Click "Save Changes" to store your configuration
 
-4. **Maximale Accounts einstellen (optional):**
+6. **Create Product Group and Product:**
+   - Navigate to `yourdomain.com/admin/configproducts.php`
+   - Create a new product group and add a new product
+   - When creating the product, choose "Shared Hosting" as the product type and "SKRIME Plesk Licenses" as the module
+   - Uncheck "Create as Hidden" to make the product visible
 
-    - Hier kannst du die maximale Anzahl der über Skrime beziehbaren Lizenzen festlegen.
+## Usage
 
+After configuration, you can use SKRIME to manage Plesk licenses within your WHMCS products and services. The module supports the following features:
 
-5. **Einstellungen speichern:**
+- **License Provisioning:** Automatically provision new Plesk licenses
+- **License Renewal:** Renew existing Plesk licenses
+- **License Management:** Manage existing licenses, including IP binding
 
-    - Klicke auf „Save Changes“, um die Einstellungen zu speichern.
+## Support
 
+If you need assistance with installing or using the module, please contact SKRIME support through our ticket system:
 
-6. **Produktgruppe und Produkt erstellen:**
+- Support ticket: https://skrime.eu/support/overview
 
-    1. Navigiere zu `deinedomain.de/admin/configproducts.php`.
-    2. Erstelle eine neue Produktgruppe und füge ein neues Produkt hinzu.
-    3. Wähle beim Erstellen des Produkts „Shared Hosting“ als Produktart und als Modul **Skrime Plesk Lizenzen** aus.
-    4. Entferne den Haken bei „Create as Hidden“, damit das Produkt sichtbar ist.
+Our support team will be happy to assist you with any questions or issues you may encounter.
+
+## License
+
+This module is released under the MIT License. See the LICENSE file for more details.
