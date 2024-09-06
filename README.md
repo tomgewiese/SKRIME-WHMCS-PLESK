@@ -11,27 +11,31 @@ This module enables the integration of SKRIME's Plesk licensing service into WHM
 
 ## Installation
 
-1. **Download and Unzip:** 
-   Download the module ZIP file and unzip its contents into the root directory of your WHMCS installation.
+1. **Download:** Download the `modules.zip` file that contains the SKRIME WHMCS module.
 
-2. **Add Server:**
+2. **Unzip:** Unzip the `modules.zip` file in the root directory of your WHMCS installation. This will copy the necessary files into the appropriate directories.
+
+    - The contents of the `modules.zip` should be copied into the following directory:
+        - `/modules/servers/skrimeplesklicense/`
+
+3. **Add Server:**
    - Go to your WHMCS admin area: `yourdomain.com/admin/configservers.php`
    - Click on "Add New Server"
    - Select "SKRIME Plesk License" as the module
    - Enter `skrime.eu` as the hostname
    - Enter your API token in the "Username", "Password", and "Access Hash" fields
 
-3. **Test Connection:**
+4. **Test Connection:**
    - Click on "Test Connection" and wait for confirmation of a successful connection
    - Optionally, give the server a custom name for better identification
 
-4. **Set Maximum Accounts (Optional):**
+5. **Set Maximum Accounts (Optional):**
    - Set the maximum number of licenses that can be obtained through SKRIME
 
-5. **Save Settings:**
+6. **Save Settings:**
    - Click "Save Changes" to store your configuration
 
-6. **Create Product Group and Product:**
+7. **Create Product Group and Product:**
    - Navigate to `yourdomain.com/admin/configproducts.php`
    - Create a new product group and add a new product
    - When creating the product, choose "Shared Hosting" as the product type and "SKRIME Plesk Licenses" as the module
